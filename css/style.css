@@ -1,0 +1,1484 @@
+﻿@charset"UTF-8";
+
+	
+	@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?5773xk');
+	src:url('../fonts/icomoon.eot?5773xk#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf?5773xk') format('truetype'),
+		url('../fonts/icomoon.woff?5773xk') format('woff'),
+		url('../fonts/icomoon.svg?5773xk#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu3:before {
+	content: "\e902";
+}
+
+
+	
+html{
+	font-size:62.5%;
+}
+
+body{
+	font-family:HG丸ｺﾞｼｯｸM-PRO;
+}
+
+.wrap:before{
+	position:absolute;
+	content:"";
+	display:block;
+	width:100%;
+	background: #efefef;
+	height:350px;
+}
+
+.wrap2{
+	width:1000px;
+	margin: 0 auto;
+}
+
+
+.header{
+	background: #efefef url(../img/header.png) center bottom no-repeat;
+	background-size:1000px 300px;
+	width:100%;
+	position:relative;
+	margin: 0 auto 60px;
+	height:350px;
+}
+
+
+.inner{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	box-sizing:border-box;
+}
+
+h1>a{
+	margin-top:2px;
+	font-family:HGS明朝B;
+	font-size:40px;
+	font-size:4rem;
+	color:#7E91ED;
+	width:35%;
+	float:left;
+	margin-bottom:27%;
+	text-decoration:none;
+	margin-left:20px
+}
+.inner>h1>a>span{
+	font-family: Meiryo UI;
+	font-size:40px;
+	font-size:100%;
+}
+
+button{
+	display:none;
+}
+
+.inner>p{
+	margin-top: 10px;
+	margin-left: 100px;
+	font-size:13px;
+	font-size:1.3rem;
+	float:left;
+	color:#697AE2;
+}
+
+.inner>p.todoke{
+	color:#666;
+	font-size:0.9em;
+	margin-top: 20px;
+	margin-left: 30px;
+}
+
+.inner>p.tel{
+	width:205px;
+	float: right;
+	text-align: right;
+	box-sizing:border-box;
+	height:30px;
+	font-size:20px;
+	font-size:2.0rem;
+	color:#294982;
+	margin-left: 0px;
+	margin-right: 1%;
+	background:url(../img/p_bg.png) no-repeat;
+	line-height:30px;
+}
+
+
+.inner>h2{
+	clear:both;
+	color:#EA758E;
+	font-size:30px;
+	font-size:3.0rem;
+	text-align:center;
+}
+
+.nav{
+	padding: 0px 300%;
+	margin:350px -300%;
+	background: #697AE2;
+	width: 100%;
+	height:60px;
+	position:absolute;
+}
+
+.nav>ul>li{
+	float:left;
+	box-sizing:border-box;
+	width:20%;
+	height:60px;
+	background: #697AE2;
+}
+
+.nav>ul>li.visit{
+	background: #5A6ABA;
+}
+
+.nav>ul>li+li{
+	border-left: 1px solid #fff;
+}
+
+.nav>ul>li>a{
+	display:block;
+ color:#FFF;
+ text-decoration:none;
+ width: 100%;
+ line-height:6rem;
+ text-align:center;
+ font-size:20px;
+ font-size:2.0rem;
+ font-weight:bold;
+}
+
+.nav>ul>li>a:hover{
+	background: #294982;
+}
+
+.main{
+	box-sizing:border-box;
+	padding: 2%;
+}
+
+.main>.banner{
+	clear:both;
+}
+
+.main>.banner>h2{
+	color:#EA758E;
+	font-size:35px;
+	font-size:35px;
+	margin: 1em 0 10px 0px;
+}
+
+.main>.banner>ul{
+	box-sizing:border-box;
+	border-radius:10px;
+	padding: 20px 0 0 285px;
+	width: 100%;
+	height:150px;
+	background: #FBE3FC url(../img/fe046.jpg) no-repeat left;
+	margin-bottom: 10px;
+}
+
+.main>.banner>ul>li{
+	font-size:24px;
+	font-size:2.4rem;
+	color: #EA758E;
+	list-style:disc;
+	margin-bottom: 5px;
+}
+
+.main>.banner>h3{
+	margin-top: 10px;
+	font-size:35px;
+	font-size:3.5rem;
+	color: #697AE2;
+	float:left;
+}
+
+.main>.banner>p{
+	text-align:right;
+	color:#697AE2;
+	font-size:1.5rem;
+	clear:both;
+}
+
+.main>.banner>p.tel{
+	width: 405px;
+	float: right;
+	clear:none;
+	padding-top: 10px;
+	font-size:40px;
+	font-size:4.0rem;
+	color:#294982;
+	background: url(../img/tel_bg.png) no-repeat left 0;
+}
+
+.footerBg{
+	background: #9F9FC1;
+
+}
+.footer{
+	width:1000px;
+	margin:0 auto;
+	box-sizing:border-box;
+	clear:both;
+	background: #9F9FC1;
+	height:100px;
+	padding: 25px;
+}
+
+.footer>dl{
+	color:#fff;
+	font-size:2rem;
+}
+
+
+.footer>ul{
+	margin: -25px 0 5px 0;
+	float:right;
+}
+
+.footer>ul>li{
+	float:left;
+	padding:0 10px;
+}
+
+.footer>ul>li+li{
+	border-left: 1px solid #5b5b5b;
+}
+
+.footer>ul>li>a{
+	font-size:16px;
+	font-size:2rem;
+	color:#5b5b5b;
+	text-decoration:none;
+}
+
+.footer>p{
+	text-align:right;
+	clear:both;
+	color:#5b5b5b;
+	font-size:12px;
+	font-size:1.2rem;
+}
+
+.footer>p>a{
+	color:#5b5b5b;
+	text-decoration:none;
+}
+
+/*調査の流れページ*/
+
+.main>.flow{
+	padding:1%;
+
+}
+
+.main>.flow>h2{
+	font-size:30px;
+	font-size:3.0rem;
+	text-align:center;
+	color:#666;
+	margin-bottom: 20px;
+	background: #C8D9FF;
+	padding: 1% 0;
+}
+
+.main>.flow>ul{
+	margin: 0 auto;
+	width: 100%;
+}
+
+.main>.flow>ul>li{
+	height:140px;
+	width:100%;
+	color:#333;
+	border:1px solid #666;
+	border-radius:10px;
+	margin: 0 auto 30px;
+	font-size:20px;
+	font-size:2.3rem;
+	padding-left: 20rem;
+	box-sizing:border-box;
+	line-height:40px;
+	display: -moz-box;
+	display: -webkit-box;
+	display: -ms-box;
+	display: box;
+	-moz-box-align: center;
+	-webkit-box-align: center;
+	-ms-box-align: center;
+	box-align: center;
+}
+	
+.main>.flow>ul>li>span{
+	color: #EA758E;
+}
+
+.main>.flow>ul>li>span.br:before{
+	content: "\A" ;
+	white-space: pre ;
+}
+
+.main>.flow>ul>li.no1{
+	background: url(../img/fe046.jpg) no-repeat -20px;
+	background-size:contain;
+}
+
+.main>.flow>ul>li.no2{
+	background: url(../img/gatag-00007055.jpg) no-repeat -30px;
+	background-size:contain;
+}
+
+.main>.flow>ul>li.no3{
+	background:url(../img/fe054.jpg) no-repeat -20px;
+	background-size:contain;
+}
+
+.main>.flow>ul>li.no4{
+	background:url(../img/img_6366.jpg) no-repeat -15px;
+	background-size:contain;
+}
+
+.main>.flow>ul>li.no5{
+	background: url(../img/cc-library010009866.jpg) no-repeat -30px;
+	background-size:contain;
+}
+
+.main>.flow>ul>li.no6{
+	background:url(../img/s_photo_00910.jpg) no-repeat -25px;
+	background-size:contain;
+}
+
+.main>.flow>ul>li.no7{
+	background:url(../img/fe134.jpg) no-repeat -20px;
+	background-size:contain;
+}
+
+.main>.flow>ul>li.no8{
+	background: url(../img/img_6464-300x212.jpg) no-repeat -20px;
+	background-size:contain;
+}
+
+.main>.flow>ul>li.no9{
+	background: url(../img/IMG_6323.jpg) no-repeat -30px;
+	background-size:contain;
+}
+
+.main>.flow>ul>li:after{
+	content:"";
+	display:block;
+	width:0px;
+	height:0px;
+	border:20px solid ;
+	border-color: #666 transparent transparent transparent;
+	margin:35px 0 0 230px;
+	position:absolute;
+}
+
+.main>.flow>ul>li.no1:after{
+	margin-top: 15px;
+}
+
+.main>.flow>ul>li.no4:after,
+.main>.flow>ul>li.no6:after{
+	margin-top: 55px;
+}
+
+
+.main>.flow>ul>li.no9:after{
+	display:none;
+}
+
+/*調査の流れページここまで*/
+
+/*調査項目ここから*/
+
+.main>.koumoku{
+	margin-bottom: 30px;
+	overflow:hidden;
+	padding:2%;
+}
+
+.main>.koumoku>h2,
+.main>.ryoukin>h2{
+	padding: 1% 0;
+	font-size:30px;
+	font-size:3.0rem;
+	text-align:center;
+	color:#666;
+	margin-bottom: 20px;
+	background: #C8D9FF;
+}
+
+.main>.koumoku>ul{
+	width:100%;
+	margin: 0 auto;
+}
+
+.main>.koumoku>ul>li{
+	width:30%;
+	float:left;
+	box-sizing:border-box;
+	font-size:24px;
+	font-size:2.4rem;
+	font-weight:bold;
+	text-align:center;
+	margin-bottom: 2%;
+	padding:30% 0 0 0;
+}
+
+.main>.koumoku>ul>li>a{
+	display:block;
+	text-decoration:none;
+	color: #333;
+	width: 100%;
+	height:100%;
+}
+
+.main>.koumoku>ul>li+li{
+	margin-left: 5%;
+}
+
+.main>.koumoku>ul>li.no1{
+	box-sizing:border-box;
+	text-align:center;
+	background: url(../img/koumoku_12.png) no-repeat top;
+	background-size:contain;
+	color:F993ED;
+}
+
+.main>.koumoku>ul>li.no2{
+	box-sizing:border-box;
+	text-align:center;
+	background: url(../img/koumoku_10.png) no-repeat top;
+	background-size:contain;
+	color:D291E2;
+}
+
+.main>.koumoku>ul>li.no3{
+	box-sizing:border-box;
+	text-align:center;
+	background: url(../img/koumoku_07.png) no-repeat top;
+	background-size:contain;
+	color:91B9E5;
+}
+
+.main>.koumoku>ul>li.no4{
+	margin-left: 0;
+	box-sizing:border-box;
+	text-align:center;
+	background: url(../img/no4.png) no-repeat top;
+	background-size:contain;
+	color:91B9E5;
+}
+
+.main>.koumoku>ul>li.no5{
+	box-sizing:border-box;
+	text-align:center;
+	background: url(../img/no5.png) no-repeat top;
+	background-size:contain;
+	color:91B9E5;
+}
+
+.main>.koumoku>ul>li.no0{
+	box-sizing:border-box;
+	text-align:center;
+	background:url(../img/no0.png) no-repeat top;
+	background-size:contain;
+	color:91B9E5;
+}
+
+.main>.koumoku>ul>li.no6{
+	margin-left: 0;
+	box-sizing:border-box;
+	text-align:center;
+	background: url(../img/no6.png) no-repeat top;
+	background-size:contain;
+	color:91B9E5;
+}
+
+/*調査項目ここまで*/
+
+	
+	/*調査料金ここから*/
+.ryoukin{
+	padding:2%;
+}
+
+.main>.ryoukin>ul{
+	margin: 0 auto;
+	width: 100%;
+}
+
+.main>.ryoukin>ul>li{
+	height:125px;
+	width:49%;
+	float:left;
+	color:#333;
+	border:1px solid #666;
+	border-radius:10px;
+	margin-bottom: 30px;
+	font-size:20px;
+	font-size:2rem;
+	padding-left: 14rem;
+	box-sizing:border-box;
+	line-height:40px;
+	display:block;
+	text-align:center;
+	}
+	
+.main>.ryoukin>ul>li>h3{
+	font-weight:bold;
+}
+
+.main>.ryoukin>ul>li.no1{
+	background: url(../img/koumoku_12.png) no-repeat left center;
+	background-size:contain;
+}
+
+.main>.ryoukin>ul>li.no2{
+	margin-left: 2%;
+	background:url(../img/koumoku_10.png) no-repeat left center;
+	background-size:contain;
+}
+
+.main>.ryoukin>ul>li.no3{
+	background:url(../img/koumoku_07.png) no-repeat left center;
+	background-size:contain;
+}
+
+.main>.ryoukin>ul>li.no4{
+	margin-left: 2%;
+	background:url(../img/no4.png) no-repeat left center;
+	background-size:contain;
+}
+
+.main>.ryoukin>ul>li.no5{
+	background:url(../img/no5.png) no-repeat left center;
+	background-size:contain;
+}
+
+.main>.ryoukin>ul>li.no0{
+	margin-left: 2%;
+	background:url(../img/no0.png) no-repeat left center;
+	background-size:contain;
+}
+
+.main>.ryoukin>ul>li.no6{
+	width: 100%;
+	height:150px;
+	line-height:35px;
+	padding-left: 16rem;
+	background:url(../img/no6.png) no-repeat left center;
+	background-size:contain;
+}
+
+.main>.ryoukin>ul>li.no6>p{
+	font-size:1.8rem;
+	text-align:left;
+}
+
+.main>.ryoukin>ul>li.no6>p>span{
+	color: #EA758E;
+}
+
+
+
+/*調査料金ここまで*/
+
+	
+@media screen and (max-width: 768px) {
+/* ここに768px以下用（タブレット・スマートフォン） */
+body{
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.wrap:before{
+	height:62px;
+	z-index:-1;
+}
+
+.wrap2{
+	width: 100%;
+}
+
+.header:before {
+	display:none;
+}
+
+.header{
+	height:250px;
+	background-size:contain;
+	margin-bottom:0;
+}
+
+.inner{
+	width:100%;
+}
+
+h1{
+	margin-top: 10px;
+}
+
+h1>a{
+	font-size:3.0rem;
+	float:left;
+	margin-left: 0.5rem;
+}
+
+.inner>h1>a>span{
+	font-family: Meiryo UI;
+	font-size:3rem;
+}
+
+.inner>p{
+	margin-top: -2.5%;
+	margin-left:18rem;
+	font-size:9px;
+	font-size:0.1em;
+	float:left;
+	color:#697AE2;
+	display:none;
+}
+
+.inner>p.todoke{
+	color:#666;
+	font-size:1rem;
+	margin-top: 3%;
+	float:left;
+	display: inherit;
+}
+
+
+.inner>p.tel{
+	float: right;
+	width: 135px;
+	text-align: right;
+	font-size:1.5rem;
+	background:url(../img/p_bg.png) no-repeat ;
+	background-size:contain;
+	height:1.2em;
+	line-height:1.5em;
+	margin-left:0px;
+	margin-top: 2%;
+	padding: 0 0.5rem 0 0;
+	display: inherit;
+}
+
+
+.inner>h2{
+	clear:both;
+	color:#EA758E;
+	font-size:20px;
+	font-size:2.0rem;
+	text-align:center;
+	margin-top: 5em;
+}
+
+button{
+	display:block;
+	border-radius:5px;
+	background: #efefef;
+	height:35px;
+	width:50px;
+	margin-top:0;
+	margin-right: 0.5rem;
+	float:right;
+}
+
+i.icon-menu3{
+	color:#555;
+	font-size:27px;
+}
+
+
+
+#menubtn>span{
+	display:inline-block;
+	text-indent:-9999px;
+}
+
+.nav{
+	width: 100%;
+	height:auto;
+	margin: 35px 0 0 0 ;
+	padding: 0;
+	position: absolute;
+	display:none;
+	background: rgba(105,122,226,0.8);
+}
+
+.nav>ul>li{
+	float:none;
+	box-sizing:border-box;
+	width:100%;
+	height:35px;
+	background: rgba(105,122,226,0);
+}
+
+.nav>ul>li+li{
+	border:none;
+}
+
+.nav>ul>li>a{
+	background: rgba(105,122,226,0);
+	display:block;
+ color:#FFF;
+ text-decoration:none;
+ width: 100%;
+ height:100%;
+ line-height:35px;
+ text-align:center;
+ font-size:1.3rem;
+ font-weight:normal;
+}
+
+.main{
+	box-sizing:border-box;
+	padding: 1%;
+}
+
+.main>.banner{
+	clear:both;
+}
+
+.main>.banner>h2{
+	font-size:2.8rem;
+	text-align:center;
+}
+
+.main>.banner>ul{
+	box-sizing:border-box;
+	border-radius:10px;
+	padding: 2% 0 0 30%;
+	width: 100%;
+	height:100%;
+	background: #FBE3FC url(../img/fe046.jpg) no-repeat left;
+	background-size:contain;
+	margin-bottom: 5px;
+}
+
+.main>.banner>ul>li{
+	font-size:10px;
+	color: #EA758E;
+	list-style:disc;
+	margin-bottom: 5px;
+}
+
+.main>.banner>h3{
+	margin-top: 2px;
+	font-size:2.5rem;
+	color: #697AE2;
+	float:left;
+}
+
+.main>.banner>p{
+	text-align:right;
+	color:#697AE2;
+	font-size:1.5rem;
+	clear:both;
+}
+
+.main>.banner>p.tel{
+	width: 285px;
+	float: right;
+	clear:none;
+	padding-top: 0;
+	padding-right: 0.5rem;
+	margin-bottom: 1%;
+	height:27px;
+	font-size:3.3rem;
+	color:#294982;
+	background: url(../img/tel_bg.png) no-repeat 0 0;
+	background-size:contain;
+	box-sizing:border-box;
+}
+
+.footer{
+	box-sizing:border-box;
+	clear:both;
+	background: #9F9FC1;
+	height:80px;
+	padding:2%;
+	width:100%;
+	margin:0 auto;
+}
+
+.footer>dl{
+	color:#fff;
+	font-size:1.8rem;
+}
+
+
+.footer>ul{
+	display:none;
+	margin: -15px 0 5px 0;
+	float:right;
+}
+
+.footer>ul>li{
+	float:left;
+	padding:0 10px;
+}
+
+.footer>ul>li+li{
+	border-left: 1px solid #5b5b5b;
+}
+
+.footer>ul>li>a{
+	font-size:10px;
+	font-size:1.0rem;
+	color:#5b5b5b;
+	text-decoration:none;
+}
+
+.footer>p{
+	text-align:right;
+	clear:both;
+	color:#5b5b5b;
+	font-size:15px;
+	font-size:1.5rem;
+	margin-top: -2%;
+}
+
+
+/*調査の流れ*/
+
+
+.main>.flow>h2{
+	font-size:2.4rem;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+
+.main>.flow>ul>li{
+	height:auto;
+	min-height:100px;
+	width:100%;
+	color:#333;
+	border:1px solid #666;
+	border-radius:10px;
+	margin: 0 auto 30px;
+	font-size:22px;
+	font-size:2.2rem;
+	padding-left: 150px;
+	box-sizing:border-box;
+	line-height:2rem;
+	display: -moz-box;
+	display: -webkit-box;
+	display: -ms-box;
+	display: box;
+	-moz-box-align: center;
+	-webkit-box-align: center;
+	-ms-box-align: center;
+	box-align: center;
+}
+
+
+.main>.flow>ul>li>span.br:before{
+	white-space:inherit;
+}
+
+
+.main>.flow>ul>li:after{
+	content:"";
+	display:block;
+	width:0px;
+	height:0px;
+	border:15px solid ;
+	border-color: #666 transparent transparent transparent;
+	margin:25px 0 0 25%;
+	position:absolute;
+}
+
+.main>.flow>ul>li.no1:after{
+	margin-top: 15px;
+}
+
+.main>.flow>ul>li.no8:after,
+.main>.flow>ul>li.no5:after,
+.main>.flow>ul>li.no4:after,
+.main>.flow>ul>li.no3:after{
+	margin-top: 37px;
+}
+
+.main>.flow>ul>li.no6:after{
+	margin-top: 47px;
+}
+
+/*調査の流れここまで*/
+
+/*調査項目ここから*/
+
+.main>.koumoku{
+	width: 100%;
+	box-sizing:border-box;
+}
+
+.main>.koumoku>h2,
+.main>.ryoukin>h2{
+	text-align:center;
+	font-size:2.4rem;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.main>.koumoku>ul{
+	width: 100%;
+}
+
+.main>.koumoku>ul>li{
+	width: 100%;
+	margin:0 0 2% 0 ;
+	font-weight:normal;
+	font-size:1.6rem;
+}
+
+.main>.koumoku>ul>li+li{
+	margin-left: 0;
+}
+
+.main>.koumoku>ul>li.no1{
+	width: 48%;
+	height:auto;
+	padding-top: 50%;
+}
+
+.main>.koumoku>ul>li.no2{
+	width: 48%;
+	height:auto;
+	margin-left: 4%;
+	padding-top: 50%;
+}
+
+.main>.koumoku>ul>li.no3{
+	width: 48%;
+	height:auto;
+	padding-top: 50%;
+}
+
+.main>.koumoku>ul>li.no4{
+	width: 48%;
+	height:auto;
+	margin-left: 4%;
+	padding-top: 50%;
+}
+
+.main>.koumoku>ul>li.no5{
+	width: 48%;
+	height:auto;
+	padding-top: 50%;
+}
+
+.main>.koumoku>ul>li.no0{
+	width: 48%;
+	height:auto;
+	margin-left: 4%;
+	padding-top: 50%;
+}
+
+.main>.koumoku>ul>li.no6{
+	width: 48%;
+	height:auto;
+	padding-top: 50%;
+}
+
+/*調査料金ここから*/
+
+.main>.ryoukin>ul>li{
+	height:100px;
+	font-size:15px;
+	padding-left: 16%;
+	text-align:center;
+	margin-bottom: 20px;
+}
+
+.main>.ryoukin>ul>li>p{
+	line-height:normal;
+}
+
+
+.main>.ryoukin>ul>li.no6{
+	background: none;
+	padding-left: 0;
+	height:110px;
+}
+
+.main>.ryoukin>ul>li.no6>p{
+	font-size:14px;
+}
+
+/*調査料金ここまで*/
+
+}
+@media screen and (max-width: 480px) {
+/* ここに480px以下用（スマートフォン） */
+
+body{
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.wrap:before{
+	height:62px;
+	z-index:-1;
+}
+
+.wrap2{
+	width: 100%;
+}
+
+.header:before {
+	display:none;
+}
+
+.header{
+	height:185px;
+	background-size:contain;
+	margin-bottom:0;
+}
+
+.inner{
+	width:100%;
+}
+
+h1{
+	margin-top: 10px;
+}
+
+h1>a{
+	font-size:3.0rem;
+	float:none;
+	margin-left: 0.5rem;
+}
+
+.inner>h1>a>span{
+	font-family: Meiryo UI;
+	font-size:3rem;
+}
+
+.inner>p{
+	margin-top: -2.5%;
+	margin-left:18rem;
+	font-size:9px;
+	font-size:0.1em;
+	float:left;
+	color:#697AE2;
+	display:none;
+}
+
+.inner>p.todoke{
+	color:#666;
+	font-size:1rem;
+	margin-top: 7px;
+	margin-left: 0;
+	margin-right: 1%;
+	float:right;
+	display: inherit;
+}
+
+
+.inner>p.tel{
+	float: none;
+	width: 135px;
+	text-align: right;
+	font-size:1.5rem;
+	background:url(../img/p_bg.png) no-repeat ;
+	background-size:contain;
+	height:1.2em;
+	line-height:1.5em;
+	margin-left:0.5rem;
+	margin-top: 0;
+	margin-right: 0;
+	padding: 0 0.5rem 0 0;
+	display: inherit;
+}
+
+
+.inner>h2{
+	clear:both;
+	color:#EA758E;
+	font-size:20px;
+	font-size:2.0rem;
+	text-align:center;
+	margin-top: 5em;
+}
+
+button{
+	display:block;
+	border-radius:5px;
+	background: #efefef;
+	height:35px;
+	width:50px;
+	margin-top:-2.4rem;
+	margin-right: 0.5rem;
+	float:right;
+}
+
+i.icon-menu3{
+	color:#555;
+	font-size:27px;
+}
+
+
+
+#menubtn>span{
+	display:inline-block;
+	text-indent:-9999px;
+}
+
+.nav{
+	width: 100%;
+	height:auto;
+	margin: 3px 0 0 0;
+	padding: 0;
+	position: absolute;
+	display:none;
+	background: rgba(105,122,226,0.8);
+}
+
+.nav>ul>li{
+	float:none;
+	box-sizing:border-box;
+	width:100%;
+	height:35px;
+	background: rgba(105,122,226,0);
+}
+
+.nav>ul>li+li{
+	border:none;
+}
+
+.nav>ul>li>a{
+	background: rgba(105,122,226,0);
+	display:block;
+ color:#FFF;
+ text-decoration:none;
+ width: 100%;
+ height:100%;
+ line-height:35px;
+ text-align:center;
+ font-size:1.3rem;
+ font-weight:normal;
+}
+
+.main{
+	box-sizing:border-box;
+	padding: 1%;
+}
+
+.main>.banner{
+	clear:both;
+}
+
+.main>.banner>h2{
+	font-size:1.9rem;
+	text-align:center;
+}
+
+.main>.banner>ul{
+	box-sizing:border-box;
+	border-radius:10px;
+	padding: 2% 0 0 30%;
+	width: 100%;
+	height:100%;
+	background: #FBE3FC url(../img/fe046.jpg) no-repeat left;
+	background-size:contain;
+	margin-bottom: 5px;
+}
+
+.main>.banner>ul>li{
+	font-size:1.0rem;
+	color: #EA758E;
+	list-style:disc;
+	margin-bottom: 5px;
+}
+
+.main>.banner>h3{
+	margin-top: 2px;
+	font-size:1.5rem;
+	color: #697AE2;
+	float:left;
+}
+
+.main>.banner>p{
+	text-align:right;
+	color:#697AE2;
+	font-size:1.0rem;
+	clear:both;
+}
+
+.main>.banner>p.tel{
+	width: 170px;
+	float: right;
+	clear:none;
+	padding-top: 0;
+	padding-right: 0.5rem;
+	height:18px;
+	font-size:2rem;
+	color:#294982;
+	background: url(../img/tel_bg.png) no-repeat 0 0;
+	background-size:contain;
+	box-sizing:border-box;
+}
+
+.footer{
+	box-sizing:border-box;
+	clear:both;
+	background: #9F9FC1;
+	height:50px;
+	padding:2%;
+	width:100%;
+	margin:0 auto;
+}
+
+.footer>dl{
+	color:#fff;
+	font-size:1rem;
+}
+
+
+.footer>ul{
+	display:none;
+	margin: -15px 0 5px 0;
+	float:right;
+}
+
+.footer>ul>li{
+	float:left;
+	padding:0 10px;
+}
+
+.footer>ul>li+li{
+	border-left: 1px solid #5b5b5b;
+}
+
+.footer>ul>li>a{
+	font-size:10px;
+	font-size:1.0rem;
+	color:#5b5b5b;
+	text-decoration:none;
+}
+
+.footer>p{
+	text-align:right;
+	clear:both;
+	color:#5b5b5b;
+	font-size:10px;
+	font-size:1.0rem;
+	margin-top: -2%;
+}
+
+
+/*調査の流れ*/
+
+.main>.flow{
+	padding: 0;
+}
+
+.main>.flow>h2,
+.main>.ryoukin>h2{
+	font-size:2.1rem;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+.main>.flow>ul>li{
+	height:auto;
+	min-height:80px;
+	width:100%;
+	color:#333;
+	border:1px solid #666;
+	border-radius:10px;
+	margin: 0 auto 30px;
+	font-size:13px;
+	font-size:1.3rem;
+	padding-left: 100px;
+	box-sizing:border-box;
+	line-height:2rem;
+	display: -moz-box;
+	display: -webkit-box;
+	display: -ms-box;
+	display: box;
+	-moz-box-align: center;
+	-webkit-box-align: center;
+	-ms-box-align: center;
+	box-align: center;
+}
+
+.main>.flow>ul>li>span.br:before{
+	white-space:inherit;
+}
+
+
+.main>.flow>ul>li:after{
+	content:"";
+	display:block;
+	width:0px;
+	height:0px;
+	border:15px solid ;
+	border-color: #666 transparent transparent transparent;
+	margin:15px 0 0 65px;
+	position:absolute;
+}
+
+.main>.flow>ul>li.no1:after{
+	margin-top: 10px;
+}
+
+.main>.flow>ul>li.no5:after{
+	margin-top: 15px;
+}
+
+.main>.flow>ul>li.no8:after,
+.main>.flow>ul>li.no4:after,
+.main>.flow>ul>li.no3:after{
+	margin-top: 25px;
+}
+
+.main>.flow>ul>li.no6:after{
+	margin-top: 35px;
+}
+
+/*調査の流れここまで*/
+
+/*調査項目ここから*/
+
+.main>.koumoku{
+	width: 100%;
+	padding:0;
+	box-sizing:border-box;
+}
+
+.main>.koumoku>ul{
+	width: 100%;
+}
+
+.main>.koumoku>ul>li{
+	width: 100%;
+	margin:0 0 2% 0 ;
+	font-weight:normal;
+	font-size:1.6rem;
+}
+
+.main>.koumoku>ul>li+li{
+	margin-left: 0;
+}
+
+.main>.koumoku>ul>li.no1{
+	width: 48%;
+	height:auto;
+	padding-top: 50%;
+}
+
+.main>.koumoku>ul>li.no2{
+	width: 48%;
+	height:auto;
+	margin-left: 4%;
+	padding-top: 50%;
+}
+
+.main>.koumoku>ul>li.no3{
+	width: 48%;
+	height:auto;
+	padding-top: 50%;
+}
+
+.main>.koumoku>ul>li.no4{
+	width: 48%;
+	height:auto;
+	margin-left: 4%;
+	padding-top: 50%;
+}
+
+.main>.koumoku>ul>li.no5{
+	width: 48%;
+	height:auto;
+	padding-top: 50%;
+}
+
+.main>.koumoku>ul>li.no0{
+	width: 48%;
+	height:auto;
+	margin-left: 4%;
+	padding-top: 50%;
+}
+
+.main>.koumoku>ul>li.no6{
+	width: 48%;
+	height:auto;
+	margin-left: 0;
+	padding-top: 50%;
+}
+
+/*調査項目ここまで*/
+/*調査料金ここから*/
+.ryoukin {
+	padding: 0;
+}
+
+.main>.ryoukin>ul>li{
+	width: 100%;
+	height: 85px;
+	font-size:15px;
+	padding-left: 24%;
+	float:none;
+	margin-bottom: 10px;
+}
+
+.main>.ryoukin>ul>li.no2,
+.main>.ryoukin>ul>li.no4,
+.main>.ryoukin>ul>li.no0{
+margin-left: 0;
+}
+
+.main>.ryoukin>ul>li>h3{
+	line-height:35px;
+}
+
+.main>.ryoukin>ul>li>p{
+	line-height:normal;
+}
+
+.main>.ryoukin>ul>li.no6{
+	background: none;
+	padding-left: 0;
+	height:165px;
+}
+
+
+.main>.ryoukin>ul>li.no6>p{
+	font-size:15px;
+	padding-left: 5px;
+}
+
+
+/*調査料金ここまで*/
+

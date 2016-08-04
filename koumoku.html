@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- 電話番号の自動リンク機能を無効化 -->
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="keywords" content="兵庫,姫路,探偵,興信所,浮気,素行,浮気調査,人探し" />
+<title>調査項目 姫路探偵 KISエージェント</title>
+
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="icon/favikon_1.ico" sizes="16x16" />
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="icon/favikon_2.ico" sizes="32x32" />
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="icon/favikon_3.ico" sizes="48x48" />
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="icon/favikon_4.ico" sizes="64x64" />
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>
+$(function(){
+	
+	$("#menubtn").click(function(){
+			$("#menu").slideToggle();
+	});
+	
+});
+</script>
+<script>
+$(function() {
+    if (!isPhone())
+        return;
+
+    $('span[data-action=call]').each(function() {
+        var $ele = $(this);
+        $ele.wrap('<a href="tel:' + $ele.data('tel') + '"></a>');
+    });
+});
+
+function isPhone() {
+    return (navigator.userAgent.indexOf('iPhone') > 0 || navigator.userAgent.indexOf('Android') > 0);
+}
+</script>
+
+</head>
+
+<body id="koumoku">
+<div class="wrap">
+<div class="wrap2">
+
+	<div class="header">
+	<div class="inner">
+		<h1><a href="index.html"><span>KIS</span>エージェント</a></h1>
+		<button type="button" id="menubtn"><i class="icon-menu3"></i><span>menu</span></button>
+		<p class="todoke">兵庫県公安委員会届出第63120017号</p>
+		<p>無料相談<br />秘密厳守</p>
+			<p class="tel"><span data-action="call" data-tel="0792920648">079-292-0648</span></p>
+		
+		<div class="nav" id="menu">
+			<ul>
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="flow.html">調査の流れ</a></li>
+				<li class="visit"><a href="koumoku.html">調査項目</a></li>
+				<li><a href="ryoukin.html">調査料金</a></li>
+				<li><a href="mailto:kisokarahp.gmail.com">お問合せ</a></li>
+			</ul>
+		</div><!--nav-->
+		<h2>ひとりで悩んでいませんか？</h2>
+	</div><!--inner-->	
+	</div><!--header-->
+		
+	<div class="main">
+		
+		<div class="koumoku">
+		
+		<h2>調査項目</h2>
+			<ul>
+				<li class="no1"><a href="ryoukin.html#uwaki">浮気調査</a></li>
+				<li class="no2"><a href="ryoukin.html#uwaki">素行調査</a></li>
+				<li class="no3"><a href="ryoukin.html#uwaki">人探し、行方調査</a></li>
+				<li class="no4"><a href="ryoukin.html#uwaki">結婚前調査</a></li>
+				<li class="no5"><a href="ryoukin.html#uwaki">ストーカー対策</a></li>
+				<li class="no0"><a href="ryoukin.html#uwaki">盗聴器調査</a></li>
+				<li class="no6"><a href="ryoukin.html#uwaki">その他調査</a></li>
+			</ul>
+		</div>
+		
+		<div class="banner">
+			<h2>解決の第一歩は、皆様一本のお電話から！</h2>
+			<ul>
+				<li>ご相談、お見積無料。その後、じっくりお考え下さい。</li>
+				<li>無理やり契約をすすめる事はございません。</li>
+				<li>いきなり料金を請求することはございません。</li>
+				<li>不安、悩みの無い日々を送りませんか？</li>
+			</ul>
+			<h3>各種調査のお問い合わせは</h3>
+			<p class="tel"><span data-action="call" data-tel="0792920648">079-292-0648</span></p>
+			<p>お見積無料。お気軽にご相談下さい。</p>
+		</div><!--banner-->
+	</div><!--main-->
+</div><!--wrap2-->
+</div><!--wrap-->
+
+	<div class="footerBg">
+	<div class="footer">
+		<dl>
+			<dt>KISエージェント</dt>
+			<dd>兵庫県姫路市町坪176</dd>
+			<dd><span data-action="call" data-tel="0792920648">TEL.079-292-0648</span></dd>
+		</dl>
+		<ul>
+			<li><a href="index.html">HOME</a></li>
+			<li><a href="flow.html">調査の流れ</a></li>
+			<li><a href="koumoku.html">調査項目</a></li>
+			<li><a href="ryoukin.html">調査料金</a></li>
+			<li><a href="mailto:kisokarahp.gmail.com">お問合せ</a></li>
+		</ul>
+		<p>copyright &copy; <a href="index.html">KISエージェント</a> All Rights Reserved. </p>
+	</div><!--footer-->
+</div><!--footerBg-->
+</body>
+</html>

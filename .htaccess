@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.kis-agent\.jp$
+RewriteRule ^(.*)$ http://kis-agent.jp/$1 [R=301,L]
+
+RewriteEngine on
+RewriteCond %{THE_REQUEST} ^.*/index.html
+RewriteRule ^(.*)index.html$ http://kis-agent.jp/$1 [R=301,L]
