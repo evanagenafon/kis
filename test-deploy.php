@@ -1,5 +1,18 @@
-<?php $hookSecret = ""; # 空でもOK
-set_error_handler(function($severity, $message, $file, $line) { throw new \ErrorException($message, 0, $severity, $file, $line); }); set_exception_handler(function($e) { header('HTTP/1.1 500 Internal Server Error'); echo "Error on line {$e-&gt;getLine()}: " . htmlSpecialChars($e-&gt;getMessage());
+
+<?php
+/**
+ * GitHub webhook handler template.
+ *
+ * @see  https://developer.github.com/webhooks/
+ * @author  Miloslav Hůla (https://github.com/milo)
+ */
+$hookSecret = 'secret';  # set NULL to disable check
+set_error_handler(function($severity, $message, $file, $line) {
+    throw new \ErrorException($message, 0, $severity, $file, $line);
+});
+set_exception_handler(function($e) {
+    header('HTTP/1.1 500 Internal Server Error');
+    echo "Error on line {$e->getLine()}: " . htmlSpecialChars($e->getMessage());
     die();
 });
 $rawPost = NULL;
@@ -18,12 +31,12 @@ if ($hookSecret !== NULL) {
         throw new \Exception('Hook secret does not match.');
     }
 };
-if (!isset($_SERVER['HTTP_CONTENT_TYPE'])) {
+if (!isset($_SERVER['CONTENT_TYPE'])) {
     throw new \Exception("Missing HTTP 'Content-Type' header.");
 } elseif (!isset($_SERVER['HTTP_X_GITHUB_EVENT'])) {
     throw new \Exception("Missing HTTP 'X-Github-Event' header.");
 }
-switch ($_SERVER['HTTP_CONTENT_TYPE']) {
+switch ($_SERVER['CONTENT_TYPE']) {
     case 'application/json':
         $json = $rawPost ?: file_get_contents('php://input');
         break;
@@ -33,18 +46,17 @@ switch ($_SERVER['HTTP_CONTENT_TYPE']) {
     default:
         throw new \Exception("Unsupported content type: $_SERVER[HTTP_CONTENT_TYPE]");
 }
-# イベントタイプで処理を分けます
+# Payload structure depends on triggered event
 # https://developer.github.com/v3/activity/events/types/
 $payload = json_decode($json);
 switch (strtolower($_SERVER['HTTP_X_GITHUB_EVENT'])) {
-        # githubからのテストping送信への応答
         case 'ping':
         echo 'pong';
         break;
-        # push時の応答　OKを返しておきます
     case 'push':
-        #　テーマフォルダに移動して、git pull origin release
-        exec('cd /home/users/1/sub.jp-kis-agent/web/kis git pull origin release');
+        exec('cd /home/users/1/sub.jp-kis-agent/web/kis && git pull origin master');
+            echo 'OK';
+            break;
     default:
         header('HTTP/1.0 404 Not Found');
         echo "Event:$_SERVER[HTTP_X_GITHUB_EVENT] Payload:\n";
