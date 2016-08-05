@@ -1,4 +1,4 @@
-<?php $hookSecret = 'githubで設定するsecretを書く'; # 空でもOK
+<?php $hookSecret = ""; # 空でもOK
 set_error_handler(function($severity, $message, $file, $line) { throw new \ErrorException($message, 0, $severity, $file, $line); }); set_exception_handler(function($e) { header('HTTP/1.1 500 Internal Server Error'); echo "Error on line {$e-&gt;getLine()}: " . htmlSpecialChars($e-&gt;getMessage());
     die();
 });
@@ -44,11 +44,10 @@ switch (strtolower($_SERVER['HTTP_X_GITHUB_EVENT'])) {
         # push時の応答　OKを返しておきます
     case 'push':
         #　テーマフォルダに移動して、git pull origin release
-        exec('cd テーマフォルダの絶対パス &amp;&amp; git pull origin release');
+        exec('cd /home/users/1/sub.jp-kis-agent/web/kis git pull origin release');
     default:
         header('HTTP/1.0 404 Not Found');
         echo "Event:$_SERVER[HTTP_X_GITHUB_EVENT] Payload:\n";
         print_r($payload); # For debug only. Can be found in GitHub hook log.
         die();
 }
-?>
