@@ -1,5 +1,17 @@
-<?php $hookSecret = 'githubで設定するsecretを書く'; # 空でもOK
-set_error_handler(function($severity, $message, $file, $line) { throw new \ErrorException($message, 0, $severity, $file, $line); }); set_exception_handler(function($e) { header('HTTP/1.1 500 Internal Server Error'); echo "Error on line {$e-&gt;getLine()}: " . htmlSpecialChars($e-&gt;getMessage());
+<?php
+/**
+ * GitHub webhook handler template.
+ *
+ * @see  https://developer.github.com/webhooks/
+ * @author  Miloslav Hůla (https://github.com/milo)
+ */
+$hookSecret = 'secret';  # set NULL to disable check
+set_error_handler(function($severity, $message, $file, $line) {
+    throw new \ErrorException($message, 0, $severity, $file, $line);
+});
+set_exception_handler(function($e) {
+    header('HTTP/1.1 500 Internal Server Error');
+    echo "Error on line {$e->getLine()}: " . htmlSpecialChars($e->getMessage());
     die();
 });
 $rawPost = NULL;
@@ -33,22 +45,39 @@ switch ($_SERVER['HTTP_CONTENT_TYPE']) {
     default:
         throw new \Exception("Unsupported content type: $_SERVER[HTTP_CONTENT_TYPE]");
 }
-# イベントタイプで処理を分けます
+# Payload structure depends on triggered event
 # https://developer.github.com/v3/activity/events/types/
 $payload = json_decode($json);
 switch (strtolower($_SERVER['HTTP_X_GITHUB_EVENT'])) {
-        # githubからのテストping送信への応答
         case 'ping':
         echo 'pong';
         break;
-        # push時の応答　OKを返しておきます
     case 'push':
-        #　テーマフォルダに移動して、git pull origin release
-        exec('cd テーマフォルダの絶対パス &amp;&amp; git pull origin release');
+        exec('cd /home/users/1/sub.jp-kis-agent/web/kis && git pull origin master');
+            function send_to_slack($message) {
+      $webhook_url = 'https://hooks.slack.com/services/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';
+    $options = array(
+        'http' => array(
+        'method' => 'POST',
+        'header' => 'Content-Type: application/json',
+        'content' => json_encode($message),
+        )
+    );
+    $response = file_get_contents($webhook_url, false, stream_context_create($options));
+    return $response === 'ok';
+    }
+    $message = array(
+    'username' => 'push bot',
+    'text' => 'pushed to commit repository',
+    'channel' => 'push_nortification',
+    'icon_emoji' => ':sushi:',
+    );
+    send_to_slack($message);
+            echo 'OK';
+            break;
     default:
         header('HTTP/1.0 404 Not Found');
         echo "Event:$_SERVER[HTTP_X_GITHUB_EVENT] Payload:\n";
         print_r($payload); # For debug only. Can be found in GitHub hook log.
         die();
 }
-?>
