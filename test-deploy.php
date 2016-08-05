@@ -30,12 +30,12 @@ if ($hookSecret !== NULL) {
         throw new \Exception('Hook secret does not match.');
     }
 };
-if (!isset($_SERVER['HTTP_CONTENT_TYPE'])) {
+if (!isset($_SERVER['CONTENT_TYPE'])) {
     throw new \Exception("Missing HTTP 'Content-Type' header.");
 } elseif (!isset($_SERVER['HTTP_X_GITHUB_EVENT'])) {
     throw new \Exception("Missing HTTP 'X-Github-Event' header.");
 }
-switch ($_SERVER['HTTP_CONTENT_TYPE']) {
+switch ($_SERVER['CONTENT_TYPE']) {
     case 'application/json':
         $json = $rawPost ?: file_get_contents('php://input');
         break;
@@ -54,25 +54,6 @@ switch (strtolower($_SERVER['HTTP_X_GITHUB_EVENT'])) {
         break;
     case 'push':
         exec('cd /home/users/1/sub.jp-kis-agent/web/kis && git pull origin master');
-            function send_to_slack($message) {
-      $webhook_url = 'https://hooks.slack.com/services/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';
-    $options = array(
-        'http' => array(
-        'method' => 'POST',
-        'header' => 'Content-Type: application/json',
-        'content' => json_encode($message),
-        )
-    );
-    $response = file_get_contents($webhook_url, false, stream_context_create($options));
-    return $response === 'ok';
-    }
-    $message = array(
-    'username' => 'push bot',
-    'text' => 'pushed to commit repository',
-    'channel' => 'push_nortification',
-    'icon_emoji' => ':sushi:',
-    );
-    send_to_slack($message);
             echo 'OK';
             break;
     default:
